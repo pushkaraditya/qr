@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pushkar Aditya">
+    <meta name="description" content="Attempting to build the scanner using html and js">
+    <title>Attempting to build QR code scanner for mobile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+</head>
+<body>
+    <main class="wrapper">
+        <section class="container" id="demo-content">
+            <h1 class="title">QR Parser for invoices</h1>
+            <p>This is example is build using multiple libraries. Idea is provide the functionality in 3 form, scan invoice QR, import pdf and parse</p>
+            <div>
+                <a class="button" id="startButton">Start</a>
+                <a class="button" id="resetButton">Reset</a>
+            </div>
+            <div>
+                <video id="video" height="200" width="300" style="border: 1px solid gray;"></video>
+            </div>
+            <div id="sourceSelectPanel" style="display:block;">
+                <label for="sourceSelect">Change Video Source:</label>
+                <select name="Sources" id="sourceSelect" style="max-width: 400px;"></select>
+            </div>
+            <label>Result:</label>
+            <blockquote>
+                <p id="result"></p>
+            </blockquote>
+        </section>
+        <footer class="footer">
+            <section class="container">
+                <p>Mintifi QR scanner demo</p>
+            </section>
+        </footer>
+    </main>
+    <script src="zxing.qrcodereader.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
